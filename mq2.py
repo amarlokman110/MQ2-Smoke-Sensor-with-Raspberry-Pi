@@ -1,6 +1,16 @@
+# ******************************************
+# © 2019 Amar Lokman Some Rights Reserved
+# ******************************************
+
+# ---------------------------------------------------------
+# ADD MODULES
+# ---------------------------------------------------------
 import RPi.GPIO as GPIO
 import time
 
+# ---------------------------------------------------------
+# GPIO CONFIGURATION
+# ---------------------------------------------------------
 # change these as desired - they're the pins connected from the
 SPICLK = 18
 SPIMISO = 23
@@ -57,7 +67,6 @@ def readadc(adcnum, clockpin, mosipin, misopin, cspin):
     return adcout
 
 # main ioop
-
 def main():
     init()
     print"please wait..."
@@ -75,6 +84,9 @@ def main():
             print("Gas not leak")
             time.sleep(0.5)
 
+# ---------------------------------------------------------
+# MAIN FUNCTION
+# ---------------------------------------------------------            
 if __name__ =='__main__':
     try:
         main()
